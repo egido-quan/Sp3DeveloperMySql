@@ -13,7 +13,7 @@
     $id = $_POST["id"];
 
 
-    $tareas = new TareasModel();
+    $tareas = new SqlModel();
     $borrado = $tareas->eliminar($id);
 
 

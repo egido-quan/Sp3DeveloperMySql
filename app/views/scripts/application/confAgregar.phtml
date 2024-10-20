@@ -17,8 +17,8 @@
     $inicio = $_POST["inicio"];
     $final = $_POST["final"];
 
-    $tareas = new TareasModel();
-    $tareas->agregar($id, $tarea, $responsable, $estado, $inicio, $final);
+    $tareas = new SqlModel();
+    $tareas->agregar( $tarea, $responsable, $estado, $inicio, $final);
 
 ?>
 

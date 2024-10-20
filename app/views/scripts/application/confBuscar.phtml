@@ -17,7 +17,7 @@
     $inicio = $_POST["inicio"];
     $final = $_POST["final"];
 
-    $tareas = new TareasModel();
+    $tareas = new SqlModel();
     $lista = $tareas->buscar($id, $tarea, $responsable, $estado, $inicio, $final);
 ?>
 
