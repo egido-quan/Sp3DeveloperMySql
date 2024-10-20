@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+
+<?php
+
+    $id = $_POST["id"];
+    $tarea = $_POST["tarea"];
+    $responsable = $_POST["responsable"];
+    $estado = $_POST["estado"];
+    $inicio = $_POST["inicio"];
+    $final = $_POST["final"];
+
+    $tareas = new TareasModel();
+    $lista = $tareas->buscar($id, $tarea, $responsable, $estado, $inicio, $final);
+?>
+
+    <p class="ml-10 text-2xl">
+
+    <?php
+    if (count($lista) == 0) {
+        echo "Búsqueda sin resultados.";
+    }     ?> </p>
+    <br>
+
+<div class = "mx-5 flex space-x-5">
+    <div class=" basis-2/3">
+        <table class="mx-auto bg-blue-50 border-separate border-spacing-1 border border-slate-500">
+            <thead>
+                <tr class="text-blue-900">
+                    <th>id</th>
+                    <th>Tarea</th>
+                    <th>Responsable</th>
+                    <th>Estado</th>
+                    <th>Inicio</th>
+                    <th>Final</th>
+
+                </tr>
+            </thead>
+        <tbody>
+            <?php  
+                foreach($lista as $tarea) {
+                    echo "<tr class=\"text-blue-800 \">";
+                    echo "<td class=\"border border-slate-300\">" . $tarea["id"] . "</td>";
+                    echo "<td class=\"border border-slate-300\">" . $tarea["tarea"] . "</td>";
+                    echo "<td class=\"border border-slate-300\">" . $tarea["responsable"] . "</td>";
+                    echo "<td class=\"border border-slate-300\">" . $tarea["estado"] . "</td>";
+                    echo "<td class=\"border border-slate-300\">" . $tarea["inicio"] . "</td>";
+                    echo "<td class=\"border border-slate-300\">" . $tarea["fin"] . "</td>";
+
+            }
+            ?>
+        </tbody>
+        </table>
+    </div>
+
+
+</body>
+</html>
+
+
