@@ -17,7 +17,7 @@
     $inicio = $_POST["inicio"];
     $final = $_POST["final"];
 
-    $tareas = new TareasModel();
+    $tareas = new SqlModel();
     $found = $tareas->modificar($id, $tarea, $responsable, $estado, $inicio, $final);
 
 ?>

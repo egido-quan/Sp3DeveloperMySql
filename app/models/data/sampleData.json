@@ -35,7 +35,7 @@
         "id": 5,
         "tarea": "Pintar el dormitorio",
         "responsable": "Ger\u00f2nim",
-        "estado": "pendiente",
+        "estado": "en ejecuci\u00f3n",
         "inicio": "2024-10-17T22:00",
         "fin": "2024-11-18T22:00"
     },
@@ -43,7 +43,7 @@
         "id": 6,
         "tarea": "Vender el reloj del abuelo",
         "responsable": "M\u00f3nica",
-        "estado": "pendiente",
+        "estado": "finalizado",
         "inicio": "2024-10-17T22:59",
         "fin": "2024-10-18T22:59"
     },

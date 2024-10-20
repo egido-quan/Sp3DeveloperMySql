@@ -18,9 +18,10 @@
             </thead>
         <tbody>
             <?php  
-                $tareas = new TareasModel();
-                $lista = [];
+
+                $tareas = new SqlModel();
                 $lista = $tareas->getToDoList();
+
                 foreach($lista as $tarea) {
                     echo "<tr class=\"text-blue-800 \">";
                     echo "<td class=\"border border-slate-300\">" . $tarea["id"] . "</td>";
